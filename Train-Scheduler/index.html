@@ -34,7 +34,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
+
                     </tbody>
                 </table>
 
@@ -132,6 +132,19 @@
 
             });
 
+            // working on implementing update function
+
+            // function update() {
+
+            // database.ref().orderByChild("dateAdded").on("child_added", function (childSnapshot) {
+            //     console.log(childSnapshot.val().name);
+            //     $("#train-table").empty();
+            //     $("#train-table").append("<tr><td>" + childSnapshot.val().name + "</td><td>" + childSnapshot.val().destination + "</td><td>" + childSnapshot.val().frequency + "</td><td>" + childSnapshot.val().nextTrain + "</td><td>" + childSnapshot.val().tMinutesTillTrain + "</td></tr>");
+            // })
+            // };
+            
+            // setTimeout(update, 60 * 1000);
+
             database.ref().orderByChild("dateAdded").on("child_added", function (childSnapshot) {
 
                 console.log(childSnapshot.val());
@@ -150,7 +163,7 @@
             });
 
         </script>
-
+    </div>
 </body>
 
 </html>
